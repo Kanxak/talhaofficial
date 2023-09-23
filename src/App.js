@@ -7,6 +7,21 @@ import About from './components/About';
 import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Talha Ahmed
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const App = () => {
   return (
@@ -18,8 +33,10 @@ const App = () => {
       <Services />
       <Work />
       <Contact />
-      {/* <div className='h-[4000px]'></div> */}
+      <Copyright />
+      <div className='h-[200px]'></div>
     </div>
+    
   );
 };
 
